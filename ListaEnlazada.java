@@ -7,7 +7,7 @@ public class ListaEnlazada<T> implements Secuencia<T> {
 
     private Nodo primero;
     private Nodo ultimo;
-    //private ListaEnlazada lista = new ListaEnlazada<>();
+    private ListaEnlazada lista = new ListaEnlazada<>();
     private int size;
 
     Iterador it = iterador();
@@ -85,11 +85,18 @@ public class ListaEnlazada<T> implements Secuencia<T> {
     }
 
     public T obtener(int i) {
-        throw new UnsupportedOperationException("No implementada aun");
+        int c = 0;
+        T v=null;
+        while (c < i){
+            c = c + 1;
+            v = (T) it.siguiente();
+        }
+        return v;
     }
 
     public void eliminar(int i) {
-        throw new UnsupportedOperationException("No implementada aun");
+        
+        size = size - 1;
     }
 
     public void modificarPosicion(int indice, T elem) {
