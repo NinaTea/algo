@@ -1,0 +1,30 @@
+Ej 5 
+
+Array que sea los distritos
+Para encontrar un distrito hacer binsearch
+nombreDis    [a, b,  c, d, e, f, g, h, i ,j ]
+distritos    [0, 1,  2, 3, 4, 5, 6, 7, 8, 9 ]
+y las mesas eran
+mesas        [10,20,30,40,50,60,70,80,90,100]
+
+Dada la mesa 45 haces bin search sobre mesas
+te va a dar q es en el index 4
+el index 4 es e
+-> la mesa 45 esta en el distrito e
+
+
+Ej 6
+
+recibis un Acta, que es array de votos parecido a [(P0, D0),...,(Pn-1, Dn-1)] 
+Dada una mesa (45) encontras el distrito al q pertenece (O(log(D)), como en el ej 5)
+y para registrarla buscas tu array de votos generales del distrito 
+
+VotosDistrito = [(P0, D0),...,(Pn-1, Dn-1)]
+
+y loopeas sobre toda el acta (param i)
+VotosDistrito[distritoDe(45)][i] = new 
+                                VotosDistrito(
+                                    VotosDistrito[distritoDe(45)][i].diputados + acta[i].diputados,
+                                    VotosDistrito[distritoDe(45)][i].presidente + acta[i].presidente 
+                                ) 
+
